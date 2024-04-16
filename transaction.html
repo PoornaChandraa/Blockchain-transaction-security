@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Elixir Transfer</title>
+    <link rel="icon" href="css/elixir.png">
+    <link rel="stylesheet" type="text/css" href="css/transactions.css">
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        nav a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bg-img">
+        <nav>
+            <a href="index.html">home</a>
+            <a class="active" href="transactions.html">transactions</a>
+            <a href="transfer.html">transfer</a>
+            <a href="." style="float: right;">log out</a>
+        </nav>
+        <label id="address" class='address' style="margin-left: 800px; size:10px; font-size: 20px; color:black"></label>
+        <div class="container">
+            <label>Balance: </label>
+            <label id="balance"> Balance not available </label>
+        </div>
+        <table id="table">
+            <tr>
+                <th>Description</th>
+                <th>Transaction Amount</th>
+                <th>Transaction Type</th>
+            </tr>
+            <tr>
+                <td>Transfer from Poorna</td>
+                <td>5000</td>
+                <td>Debit</td>
+            </tr>
+            <tr>
+                <td>Transfer to Khamlesh</td>
+                <td>3000</td>
+                <td>Credit</td>
+            </tr>
+            <tr>
+                <td>Transfer from Abhinav</td>
+                <td>8000</td>
+                <td>Debit</td>
+            </tr>
+            <tr>
+                <td>Transfer to Kowshik</td>
+                <td>7000</td>
+                <td>Credit</td>
+            </tr>
+            <tr>
+                <td>Transfer from Gokul</td>
+                <td>2000</td>
+                <td>Debit</td>
+            </tr>
+            <tr>
+                <td>Transfer to Nikhil</td>
+                <td>6000</td>
+                <td>Credit</td>
+            </tr>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/contract.js"></script>
+    <script src="js/transactions.js"></script>
+
+</body>
+
+</html>
