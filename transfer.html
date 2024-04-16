@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Elixir Transfer</title>
+    <link rel="icon" href="css/elixir.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/transfer.css">
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .bg {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 500px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="submit"] {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="transactions.html">Transactions</a>
+            <a class="active" href="transfer.html">Transfer</a>
+            <a href="." style="float: right;">Log Out</a>
+        </nav>
+        <div class="container">
+            <label for="add">Address</label><br>
+            <input type="text" id="add" name="address" placeholder="Enter Address..."><br>
+
+            <label for="amount">Amount</label><br>
+            <input type="number" id="amount" name="amount" placeholder="Enter Amount..."><br>
+
+            <br>
+            <label>Balance:</label>
+            <span id="balance">7,500,000</span>
+            <br><br>
+            <input type="submit" id="transfer" value="Transfer">
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/contract.js"></script>
+    <script type="text/javascript" src="js/transfer.js"></script>
+</body>
+
+</html>
